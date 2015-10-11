@@ -1,0 +1,28 @@
+<div>
+	<a href="index.php?cat=main"> Main  </a> |
+	<a href="index.php?cat=news"> News  </a> | 	
+	
+	<?
+	    if($_SESSION["isLogined"] == "yes")
+		{
+			echo '<a href="index.php?cat=profile"> Profile  </a> |'; 
+		}
+		else
+		{
+			echo '<a href="index.php?cat=registration"> Registration  </a> |'; 
+			echo '<a href="index.php?cat=login"> Login  </a> |';
+		}
+	?>
+	
+	<a href="#bottom"> Contacts  </a> | 
+	
+	<?
+	    if($_SESSION["isLogined"] == "yes")
+		{
+			echo '<a href="index.php?cat=logout"> Logout  </a> '; 
+		}
+
+	?>
+	
+	<hr />
+</div>
